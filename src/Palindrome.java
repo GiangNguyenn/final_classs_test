@@ -1,12 +1,20 @@
 public class Palindrome {
+
+    // TODO:
+    // * 2 bugs:
+    // * if (word.charAt(j) != word.charAt(j)) -> if (word.charAt(i) != word.charAt(j))
+    // * j++ -> j--
+
     static void palindrome(String word) {
-        int i, j = word.length()-1;
-        for (i=0; i<j; i++) {
-            if (word.charAt(j) != word.charAt(j)) {
+        int i, j = word.length() - 1;
+        for (i = 0; i < j; i++) {
+//            if (word.charAt(j) != word.charAt(j)) {
+            if (word.charAt(i) != word.charAt(j)) {
                 System.out.println("No");
                 return;
             }
-            j++;
+//            j++;
+            j--;
         }
         System.out.println("Yes");
         return;
